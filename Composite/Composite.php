@@ -8,6 +8,7 @@ class Composite extends Component
     public function add(Component $component)
     {
         $this->children[$component->name] = $component;
+        $component->fullName=$this->fullName.PHP_EOL.$component->name;
     }
 
     public function remove(Component $component)
@@ -17,7 +18,6 @@ class Composite extends Component
 
     public function display()
     {
-        echo $this->name . PHP_EOL;
         foreach ($this->children as $child) {
             $child->display();
         }

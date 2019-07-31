@@ -13,7 +13,7 @@ class Leaf extends Component
 
     public function display()
     {
-        echo $this->name.PHP_EOL;
+        echo $this->fullName.PHP_EOL.PHP_EOL;
     }
 
 }
